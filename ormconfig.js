@@ -1,16 +1,13 @@
+console.log(process.env.DATABASE_URL);
 
 module.exports = {
   "type": "postgres",
-  "username": "postgres",
-  "password": "docker",
-  "host": "localhost",
-  "port": 5432,
-  "database": "gostack_gobarber",
+  "url": process.env.DATABASE_URL,
   "entities": [
     ".dist/src/modules/**/infra/typeorm/entities/*.js"
   ],
   "migrations": [
-    ".dist//src/shared/infra/typeorm/migrations/*.js"
+    ".dist/src/shared/infra/typeorm/migrations/*.js"
   ],
   "cli": {
     "migrationsDir": "./src/shared/infra/typeorm/migrations"

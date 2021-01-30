@@ -6,6 +6,7 @@ temp/
 .yarn.lock
 coverage/
 ormconfig.json
+ormconfig.js
 yarn-error.log
 
 tmp/*
